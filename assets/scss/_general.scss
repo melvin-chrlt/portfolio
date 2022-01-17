@@ -13,4 +13,20 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: montserrat;
+}
+
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.website{
+    p{
+        font-size: 16px;
+        span{
+            color: #1092C2;
+        }
+    }
 }

@@ -34,5 +34,86 @@ header{
 
     #navMenu{
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        flex-direction: column;
+        background-color: rgba(#E7F0F5, 0.9);
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1em;
+        width: 40%;
+        height: 100%;
+        z-index: 100;
+        animation: menu 1s;
+
+        li{
+            transition: all ease-in-out 0.3s;
+            width: 100%;
+            padding: 1.5em 0;
+
+            a{
+                margin-left: 6em;
+                color: black;
+                font-size: 26px;
+                transition: all ease-in-out 0.3s;
+                padding: 0.9em 0;
+                padding-right: 16em;
+            }
+        }
+
+        li:hover{
+            background-color: #1092C2;
+
+            a{
+                color: white;
+            }
+        }
+
+        .socialMedia{
+            padding-top: 2em;
+            margin-left: 10em;
+        }
+    }
+
+    @keyframes menu{
+        from{
+            left: -200%;
+        }
+
+        to{
+            right: 100%;
+        }
+    }
+
+    #close{
+        position: fixed;
+        top: 50px;
+        left: 30%;
+        display: none;
+        z-index: 99999;
+        color: black;
+        font-size: 3em;
+        transition: all ease-in-out 0.3s;
+        animation: close 2s;
+    }
+
+    #close:hover{
+        cursor: pointer;
+        color: #1092C2;
+    }
+
+    @keyframes close{
+        from{
+            opacity: 0%;
+        }
+
+        50%{
+            opacity: 0%;
+        }
+
+        to{
+            opacity: 100%;
+        }
     }
 }

@@ -6,6 +6,10 @@
   font-family: montserrat;
   src: url(../font/Montserrat-Regular.ttf);
 }
+@font-face {
+  font-family: montserratBold;
+  src: url(../font/Montserrat-ExtraBold.ttf);
+}
 * {
   font-style: none;
   margin: 0;
@@ -16,8 +20,9 @@
 
 body {
   background-image: url(../images/background.jpg);
-  background-size: cover;
+  background-size: fill;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .website p {
@@ -25,6 +30,15 @@ body {
 }
 .website p span {
   color: #1092C2;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 5em;
+}
+.socialMedia img {
+  width: 60px;
+  height: 60px;
 }
 
 header {
@@ -60,19 +74,61 @@ header #navMenu {
   display: none;
 }
 
+#acceuilMain {
+  position: relative;
+}
 #acceuilMain #leftFixedBar {
   position: fixed;
   left: 0;
+  top: 0;
   height: 100%;
   background-color: #E7F0F5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 1em;
   gap: 5px;
 }
 #acceuilMain #leftFixedBar p {
   text-align: center;
+}
+#acceuilMain #laptop {
+  height: auto;
+  width: 38%;
+  position: absolute;
+  right: 0;
+  top: 2em;
+}
+#acceuilMain #title {
+  padding-left: 10em;
+  padding-top: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3em;
+  width: 50%;
+}
+#acceuilMain #title p {
+  font-size: 28px;
+}
+#acceuilMain #title h1 {
+  font-size: 62px;
+  font-family: montserratBold;
+}
+#acceuilMain #title h1 span {
+  color: #1092C2;
+  font-family: montserratBold;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1em 0;
+  background-color: #E7F0F5;
 }
 
 /*# sourceMappingURL=style.css.map */

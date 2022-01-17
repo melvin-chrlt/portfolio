@@ -8,6 +8,11 @@
     src: url(../font/Montserrat-Regular.ttf);
 }
 
+@font-face {
+    font-family: montserratBold;
+    src: url(../font/Montserrat-ExtraBold.ttf);
+}
+
 *{
     font-style: none;
     margin: 0;
@@ -18,8 +23,9 @@
 
 body{
     background-image: url(../images/background.jpg);
-    background-size: cover;
+    background-size: fill;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .website{
@@ -28,5 +34,14 @@ body{
         span{
             color: #1092C2;
         }
+    }
+}
+
+.socialMedia{
+    display: flex;
+    gap: 5em;
+    img{
+        width: 60px;
+        height: 60px;
     }
 }

@@ -8,6 +8,10 @@
         top: 20%;
     }
 
+    #laptop2{
+        display: none;
+    }
+
     #title{
         padding: 2em 0;
         padding-left: 10em;
@@ -41,12 +45,18 @@
         align-items: center;
 
         #laptop{
-            position: initial;
-            width: 80%;
+            display: none;
+        }
+
+        #laptop2{
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         #title{
-            padding: 0;
+            padding-left: 0;
+            padding-bottom: 5em;
             width: 80%;
         }
 

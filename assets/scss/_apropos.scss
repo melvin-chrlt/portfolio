@@ -152,6 +152,7 @@
         #logiciel{
             padding: 3em 0;
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 3em;
 
@@ -164,24 +165,6 @@
 }
 
 //REPONSIVE APROPOS
-@media screen and (max-width: 1300px){
-    #aproposMain{
-        #parcours{
-            padding-left: 5em;
-
-            #timeline{
-                padding-left: 3em;
-
-                #timelineBar{
-                    .date{
-                        gap: 3em;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 1300px){
     #aproposMain{
         #parcours{
@@ -214,6 +197,7 @@
 
         #parcours{
             padding: 0;
+            padding-bottom: 2em;
 
             #parcoursTitle{
                 padding-left: 5em;
@@ -228,7 +212,7 @@
 
                 #timelineBar{
                     background-color: rgba(#1092C2, 0.2);
-                    height: 185vh;
+                    height: 120vh;
 
                     .date{
                         flex-direction: column;
@@ -281,7 +265,6 @@
         #parcours{
             #timeline{
                 #timelineBar{
-                    height: 200vh;
                     .date{
                         .timelineText{
                             width: 26em;
@@ -296,9 +279,9 @@
 @media screen and (max-width: 410px){
     #aproposMain{
         #parcours{
+            padding-bottom: 5em;
             #timeline{
                 #timelineBar{
-                    height: 230vh;
                     .date{
                         .timelineText{
                             width: 20em;

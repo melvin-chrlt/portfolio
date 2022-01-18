@@ -26,6 +26,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
 .website p {
@@ -62,6 +63,10 @@ body {
   color: #1092C2;
 }
 
+.mainFooter {
+  padding-bottom: 5em;
+  padding-top: 3em;
+}
 .mainFooter #separator {
   border-bottom: 2px solid #1092C2;
   width: 65%;
@@ -291,6 +296,9 @@ header #close:hover {
   right: 0;
   top: 20%;
 }
+#acceuilMain #laptop2 {
+  display: none;
+}
 #acceuilMain #title {
   padding: 2em 0;
   padding-left: 10em;
@@ -319,11 +327,16 @@ header #close:hover {
     align-items: center;
   }
   #acceuilMain #laptop {
-    position: initial;
-    width: 80%;
+    display: none;
+  }
+  #acceuilMain #laptop2 {
+    display: block;
+    width: 100%;
+    height: auto;
   }
   #acceuilMain #title {
-    padding: 0;
+    padding-left: 0;
+    padding-bottom: 5em;
     width: 80%;
   }
   #acceuilMain .socialMedia {
@@ -480,6 +493,7 @@ header #close:hover {
 #aproposMain #outils #logiciel {
   padding: 3em 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 3em;
 }
@@ -488,17 +502,6 @@ header #close:hover {
   height: 90px;
 }
 
-@media screen and (max-width: 1300px) {
-  #aproposMain #parcours {
-    padding-left: 5em;
-  }
-  #aproposMain #parcours #timeline {
-    padding-left: 3em;
-  }
-  #aproposMain #parcours #timeline #timelineBar .date {
-    gap: 3em;
-  }
-}
 @media screen and (max-width: 1300px) {
   #aproposMain #parcours {
     padding-left: 2em;
@@ -520,6 +523,7 @@ header #close:hover {
   }
   #aproposMain #parcours {
     padding: 0;
+    padding-bottom: 2em;
   }
   #aproposMain #parcours #parcoursTitle {
     padding-left: 5em;
@@ -533,7 +537,7 @@ header #close:hover {
   }
   #aproposMain #parcours #timeline #timelineBar {
     background-color: rgba(16, 146, 194, 0.2);
-    height: 185vh;
+    height: 120vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date {
     flex-direction: column;
@@ -567,16 +571,13 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 500px) {
-  #aproposMain #parcours #timeline #timelineBar {
-    height: 200vh;
-  }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 26em;
   }
 }
 @media screen and (max-width: 410px) {
-  #aproposMain #parcours #timeline #timelineBar {
-    height: 230vh;
+  #aproposMain #parcours {
+    padding-bottom: 5em;
   }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 20em;
@@ -649,20 +650,18 @@ header #close:hover {
   padding: 1em 30em;
   padding-left: 2em;
 }
-#contactMain .btn {
-  display: flex;
-  justify-content: flex-end;
-  width: 49%;
-}
-#contactMain .btn a {
+#contactMain form .btn {
+  align-self: flex-end;
+  width: 15%;
   padding: 0.5em 2em;
   background-color: #1092C2;
   border: 1px solid #1092C2;
   border-radius: 5px;
   color: white;
   transition: all ease-in-out 0.2s;
+  text-align: center;
 }
-#contactMain .btn a:hover {
+#contactMain form .btn:hover {
   color: #1092C2;
   background-color: white;
 }
@@ -689,11 +688,14 @@ header #close:hover {
   color: black;
 }
 #contactMain #laptop {
-  width: 35%;
+  width: 28%;
   height: auto;
   position: absolute;
   right: 0;
-  bottom: 20%;
+  top: 50%;
+}
+#contactMain .mainFooter {
+  padding-top: 3em;
 }
 #contactMain .mainFooter #separator {
   width: 120%;
@@ -702,6 +704,38 @@ header #close:hover {
   gap: 15em;
 }
 
+@media screen and (max-width: 1090px) {
+  #contactMain .mainFooter section {
+    gap: 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #contactMain #laptop {
+    display: none;
+  }
+  #contactMain .mainFooter section {
+    gap: 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #contactMain #address {
+    padding: 0;
+    padding-left: 5em;
+  }
+}
+@media screen and (max-width: 700px) {
+  #contactMain form {
+    width: 85%;
+  }
+  #contactMain form input {
+    padding: 1em 0;
+    padding-left: 2em;
+  }
+  #contactMain form textarea {
+    padding: 1em 0;
+    padding-left: 2em;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -710,6 +744,8 @@ footer {
   background-color: #E7F0F5;
   margin-top: 5em;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 @media screen and (max-width: 450px) {

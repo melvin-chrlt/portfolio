@@ -152,8 +152,13 @@ header{
 @media screen and (max-width: 1090px){
     header{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         padding-bottom: 3em;
+
+        #headerTitle{
+            padding-top: 5em;
+            align-self: flex-start;
+        }
 
         .website{
             display: none;
@@ -167,6 +172,7 @@ header{
             width: 15%;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
+            z-index: 200;
         }
 
         #menuBurger:hover{
@@ -206,6 +212,8 @@ header{
 
 @media screen and (max-width: 816px){
     header{
+        padding: 3em 5em;
+        
         #navMenu{
             li{
                 a{
@@ -222,8 +230,12 @@ header{
 
 @media screen and (max-width: 570px){
     header{
+        padding: 3em 2em;
+
         #navMenu{
+
             li{
+
                 a{
                     padding-right: 1em;
                     margin-left: 1em;
@@ -235,12 +247,15 @@ header{
 
 @media screen and (max-width: 390px){
     header{
+
         #menuBurger{
             padding: 2em 1em;
         }
 
         #navMenu{
+
             li{
+                
                 a{
                     font-size: 16px;
                 }

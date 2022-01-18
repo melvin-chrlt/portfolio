@@ -80,6 +80,12 @@ body {
   #leftFixedBar {
     display: none;
   }
+
+  .mainFooter section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+  }
 }
 header {
   display: flex;
@@ -207,8 +213,12 @@ header #close:hover {
 @media screen and (max-width: 1090px) {
   header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding-bottom: 3em;
+  }
+  header #headerTitle {
+    padding-top: 5em;
+    align-self: flex-start;
   }
   header .website {
     display: none;
@@ -221,6 +231,7 @@ header #close:hover {
     width: 15%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    z-index: 200;
   }
   header #menuBurger:hover div {
     background-color: white;
@@ -246,6 +257,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 816px) {
+  header {
+    padding: 3em 5em;
+  }
   header #navMenu li a {
     padding-right: 3em;
   }
@@ -254,6 +268,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 570px) {
+  header {
+    padding: 3em 2em;
+  }
   header #navMenu li a {
     padding-right: 1em;
     margin-left: 1em;
@@ -389,8 +406,8 @@ header #close:hover {
   position: relative;
 }
 #aproposMain #parcours #timeline #timelineBar {
-  border-right: 3px solid black;
-  width: 1px;
+  background-color: black;
+  width: 3px;
   height: 130vh;
   position: relative;
 }
@@ -471,6 +488,100 @@ header #close:hover {
   height: 90px;
 }
 
+@media screen and (max-width: 1300px) {
+  #aproposMain #parcours {
+    padding-left: 5em;
+  }
+  #aproposMain #parcours #timeline {
+    padding-left: 3em;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date {
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #aproposMain #parcours {
+    padding-left: 2em;
+  }
+  #aproposMain #parcours #timeline {
+    padding-left: 3em;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date {
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 1030px) {
+  #aproposMain #aproposText {
+    width: 95%;
+    align-items: flex-start;
+  }
+  #aproposMain #aproposText p {
+    text-align: start;
+  }
+  #aproposMain #parcours {
+    padding: 0;
+  }
+  #aproposMain #parcours #parcoursTitle {
+    padding-left: 5em;
+    padding-top: 2em;
+  }
+  #aproposMain #parcours #timeline {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #aproposMain #parcours #timeline #timelineBar {
+    background-color: rgba(16, 146, 194, 0.2);
+    height: 185vh;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date {
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-49.6%);
+    gap: 2em;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .leftPart {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .leftPart .blueLine {
+    display: none;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .timelineText h4 {
+    text-align: center;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .timelineText h5 {
+    text-align: center;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .timelineText p {
+    text-align: center;
+  }
+  #aproposMain #outils {
+    padding: 3em;
+  }
+  #aproposMain #outils img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #aproposMain #parcours #timeline #timelineBar {
+    height: 200vh;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .timelineText {
+    width: 26em;
+  }
+}
+@media screen and (max-width: 410px) {
+  #aproposMain #parcours #timeline #timelineBar {
+    height: 230vh;
+  }
+  #aproposMain #parcours #timeline #timelineBar .date .timelineText {
+    width: 20em;
+  }
+}
 #portfolioMain #projects {
   display: flex;
   flex-wrap: wrap;
@@ -497,6 +608,18 @@ header #close:hover {
   margin-top: 5em;
 }
 
+@media screen and (max-width: 500px) {
+  #portfolioMain #projects {
+    gap: 4em;
+  }
+  #portfolioMain #projects .projet {
+    width: 305px;
+    height: 305px;
+  }
+  #portfolioMain #projects .bot {
+    margin: 0;
+  }
+}
 #contactMain {
   display: flex;
   flex-direction: column;

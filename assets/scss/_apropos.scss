@@ -60,8 +60,8 @@
             position: relative;
 
             #timelineBar{
-                border-right: 3px solid black;
-                width: 1px;
+                background-color: black;
+                width: 3px;
                 height: 130vh;
                 position: relative;
 
@@ -161,4 +161,151 @@
             }
         }
     }
+}
+
+//REPONSIVE APROPOS
+@media screen and (max-width: 1300px){
+    #aproposMain{
+        #parcours{
+            padding-left: 5em;
+
+            #timeline{
+                padding-left: 3em;
+
+                #timelineBar{
+                    .date{
+                        gap: 3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #aproposMain{
+        #parcours{
+            padding-left: 2em;
+
+            #timeline{
+                padding-left: 3em;
+
+                #timelineBar{
+                    .date{
+                        gap: 3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1030px){
+    #aproposMain{
+
+        #aproposText{
+            width: 95%;
+            align-items: flex-start;
+
+            p{
+                text-align: start;
+            }
+        }
+
+        #parcours{
+            padding: 0;
+
+            #parcoursTitle{
+                padding-left: 5em;
+                padding-top: 2em;
+            }
+
+            #timeline{
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                #timelineBar{
+                    background-color: rgba(#1092C2, 0.2);
+                    height: 185vh;
+
+                    .date{
+                        flex-direction: column;
+                        align-items: center;
+                        transform: translateX(-49.6%);
+                        gap: 2em;
+
+                        .leftPart{
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 1em;
+
+                            .blueLine{
+                                display: none;
+                            }
+                        }
+
+                        .timelineText{
+
+                            h4{
+                                text-align: center;
+                            }
+
+                            h5{
+                                text-align: center;
+                            }
+
+                            p{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #outils{
+            padding: 3em;
+
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    #aproposMain{
+        #parcours{
+            #timeline{
+                #timelineBar{
+                    height: 200vh;
+                    .date{
+                        .timelineText{
+                            width: 26em;
+                        }
+                    }
+                }
+            }
+        }
+    }                              
+}
+
+@media screen and (max-width: 410px){
+    #aproposMain{
+        #parcours{
+            #timeline{
+                #timelineBar{
+                    height: 230vh;
+                    .date{
+                        .timelineText{
+                            width: 20em;
+                        }
+                    }
+                }
+            }
+        }
+    }                              
 }

@@ -29,3 +29,20 @@
         }
     }
 }
+
+@media screen and (max-width: 500px){
+    #portfolioMain{
+        #projects{
+            gap: 4em;
+
+            .projet{
+                width: 305px;
+                height: 305px;
+            }
+
+            .bot{
+                margin: 0;
+            }
+        }
+    }
+}

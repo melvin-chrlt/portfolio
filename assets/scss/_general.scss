@@ -93,4 +93,13 @@ body{
     #leftFixedBar{
         display: none;
     }
+
+    .mainFooter{
+        
+        section{
+            flex-direction: column;
+            justify-content: center;
+            gap: 3em;
+        }
+    }
 }

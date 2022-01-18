@@ -1,0 +1,31 @@
+#portfolioMain{
+
+    #projects{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8em;
+        justify-content: center;
+        padding: 3em 0;
+
+        .projet{
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+
+            .title{
+                background-color: #1092C2;
+                position: absolute;
+                height: 75px;
+                width: 50%;
+                bottom: 0;
+                transform: translateY(50%);
+                right: 10%;
+            }
+        }
+
+        .bot{
+            margin-top: 5em;
+        }
+    }
+}

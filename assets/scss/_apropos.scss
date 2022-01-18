@@ -1,0 +1,164 @@
+#aproposMain{
+
+    h2{
+        font-size: 40px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+
+    .separator{
+        border-bottom: 1px solid #1092C2;
+        width: 15%;
+        height: 1px;
+        padding: 0.5em 0;
+        margin: 0 auto;
+    }
+
+    #aproposText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        width: 70%;
+        padding: 3em 0;
+        margin: 0 auto;
+
+        p{
+            text-align: center;
+
+            span{
+                color: #1092C2;
+            }
+        }
+    }
+
+    #parcours{
+        background-color: #E7F0F5;
+        padding: 3em 0;
+        padding-left: 10em;
+
+        #parcoursTitle{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1em;
+
+            img{
+                width: 66px;
+                height: 66px;
+            }
+
+            h3{
+                font-size: 30px;
+            }
+        }
+
+        #timeline{
+            padding: 3em 0;
+            padding-left: 5em;
+            display: flex;
+            position: relative;
+
+            #timelineBar{
+                border-right: 3px solid black;
+                width: 1px;
+                height: 130vh;
+                position: relative;
+
+                .date{
+                    position: absolute;
+                    transform: translateX(-0.7%);
+                    left: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 6em;
+
+                    .leftPart{
+                        display: flex;
+                        align-items: center;
+                        gap: 5em;
+
+                        .circle{
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background-color: #1092C2;  
+                        }
+    
+                        p{
+                            font-size: 22px;
+                            width: 6em;
+                        }
+    
+                        .blueLine{
+                            margin-left: 2em;
+                            height: 1px;
+                            width: 65px;
+                            background-color: #1092C2; 
+                        }
+                    }
+
+                    .timelineText{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5em;
+                        width: 30em;
+        
+                        h4{
+                            color: #1092C2;
+                            font-size: 22px;
+                            font-weight: bold;
+                        }
+        
+                        h5{
+                            font-weight: 700;
+                            font-size: 21px;
+                        }
+        
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+
+                }
+
+                .today{
+                    top: 5%;
+                }
+
+                .aug{
+                    top: 30%;
+                }
+
+                .jan{
+                    top: 55%;
+                }
+
+                .jul{
+                    top: 80%;
+                }
+            }
+        }
+    }
+
+    #outils{
+        padding: 3em 0;
+        padding-left: 10em;
+        
+        h3{
+            font-size: 30px;
+        }
+
+        #logiciel{
+            padding: 3em 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3em;
+
+            img{
+                width: 90px;
+                height: 90px;
+            }
+        }
+    }
+}

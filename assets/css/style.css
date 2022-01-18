@@ -23,6 +23,8 @@ body {
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
 }
 
 .website p {
@@ -41,10 +43,54 @@ body {
   height: 60px;
 }
 
+#leftFixedBar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #E7F0F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  gap: 5px;
+}
+#leftFixedBar p {
+  text-align: center;
+  color: #1092C2;
+}
+
+.mainFooter #separator {
+  border-bottom: 2px solid #1092C2;
+  width: 65%;
+  height: 1px;
+  padding: 0.5em 0;
+  margin: 0 auto;
+}
+.mainFooter section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 3em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 3em 10em;
+}
+header #headerTitle h1 {
+  color: #1092C2;
+  font-family: montserratBold;
+  font-size: 42px;
+}
+header #headerTitle #titleUnderline {
+  height: 3px;
+  width: 65%;
+  background-color: black;
+  border-radius: 20px;
 }
 header #menuBurger {
   display: flex;
@@ -96,7 +142,7 @@ header #navMenu li a {
   font-size: 26px;
   transition: all ease-in-out 0.3s;
   padding: 0.9em 0;
-  padding-right: 16em;
+  padding-right: 8em;
 }
 header #navMenu li:hover {
   background-color: #1092C2;
@@ -143,35 +189,16 @@ header #close:hover {
   }
 }
 
-#acceuilMain {
-  position: relative;
-}
-#acceuilMain #leftFixedBar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: #E7F0F5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1em;
-  gap: 5px;
-}
-#acceuilMain #leftFixedBar p {
-  text-align: center;
-}
 #acceuilMain #laptop {
   height: auto;
   width: 38%;
   position: absolute;
   right: 0;
-  top: 2em;
+  top: 20%;
 }
 #acceuilMain #title {
+  padding: 2em 0;
   padding-left: 10em;
-  padding-top: 8em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -190,14 +217,147 @@ header #close:hover {
   font-family: montserratBold;
 }
 
-footer {
+#aproposMain h2 {
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+#aproposMain .separator {
+  border-bottom: 1px solid #1092C2;
+  width: 15%;
+  height: 1px;
+  padding: 0.5em 0;
+  margin: 0 auto;
+}
+#aproposMain #aproposText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 70%;
+  padding: 3em 0;
+  margin: 0 auto;
+}
+#aproposMain #aproposText p {
+  text-align: center;
+}
+#aproposMain #aproposText p span {
+  color: #1092C2;
+}
+#aproposMain #parcours {
+  background-color: #E7F0F5;
+  padding: 3em 0;
+  padding-left: 10em;
+}
+#aproposMain #parcours #parcoursTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+#aproposMain #parcours #parcoursTitle img {
+  width: 66px;
+  height: 66px;
+}
+#aproposMain #parcours #parcoursTitle h3 {
+  font-size: 30px;
+}
+#aproposMain #parcours #timeline {
+  padding: 3em 0;
+  padding-left: 5em;
+  display: flex;
+  position: relative;
+}
+#aproposMain #parcours #timeline #timelineBar {
+  border-right: 3px solid black;
+  width: 1px;
+  height: 130vh;
+  position: relative;
+}
+#aproposMain #parcours #timeline #timelineBar .date {
   position: absolute;
-  bottom: 0;
+  transform: translateX(-0.7%);
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 6em;
+}
+#aproposMain #parcours #timeline #timelineBar .date .leftPart {
+  display: flex;
+  align-items: center;
+  gap: 5em;
+}
+#aproposMain #parcours #timeline #timelineBar .date .leftPart .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #1092C2;
+}
+#aproposMain #parcours #timeline #timelineBar .date .leftPart p {
+  font-size: 22px;
+  width: 6em;
+}
+#aproposMain #parcours #timeline #timelineBar .date .leftPart .blueLine {
+  margin-left: 2em;
+  height: 1px;
+  width: 65px;
+  background-color: #1092C2;
+}
+#aproposMain #parcours #timeline #timelineBar .date .timelineText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 30em;
+}
+#aproposMain #parcours #timeline #timelineBar .date .timelineText h4 {
+  color: #1092C2;
+  font-size: 22px;
+  font-weight: bold;
+}
+#aproposMain #parcours #timeline #timelineBar .date .timelineText h5 {
+  font-weight: 700;
+  font-size: 21px;
+}
+#aproposMain #parcours #timeline #timelineBar .date .timelineText p {
+  font-size: 18px;
+}
+#aproposMain #parcours #timeline #timelineBar .today {
+  top: 5%;
+}
+#aproposMain #parcours #timeline #timelineBar .aug {
+  top: 30%;
+}
+#aproposMain #parcours #timeline #timelineBar .jan {
+  top: 55%;
+}
+#aproposMain #parcours #timeline #timelineBar .jul {
+  top: 80%;
+}
+#aproposMain #outils {
+  padding: 3em 0;
+  padding-left: 10em;
+}
+#aproposMain #outils h3 {
+  font-size: 30px;
+}
+#aproposMain #outils #logiciel {
+  padding: 3em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+#aproposMain #outils #logiciel img {
+  width: 90px;
+  height: 90px;
+}
+
+footer {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 1em 0;
   background-color: #E7F0F5;
+  margin-top: 5em;
 }
 
 /*# sourceMappingURL=style.css.map */

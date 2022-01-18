@@ -55,7 +55,7 @@ header{
         display: none;
         position: fixed;
         top: 0;
-        left: 0px;
+        left: 0;
         flex-direction: column;
         background-color: rgba(#E7F0F5, 0.9);
         align-items: flex-start;
@@ -65,6 +65,7 @@ header{
         height: 100%;
         z-index: 100;
         animation: menu 1s;
+        
 
         li{
             transition: all ease-in-out 0.3s;
@@ -72,7 +73,7 @@ header{
             padding: 1.5em 0;
 
             a{
-                margin-left: 6em;
+                margin-left: 5em;
                 color: black;
                 font-size: 20px;
                 transition: all ease-in-out 0.3s;
@@ -91,7 +92,7 @@ header{
 
         .socialMedia{
             padding-top: 2em;
-            margin-left: 7em;
+            margin-left: 5em;
         }
     }
 
@@ -101,7 +102,17 @@ header{
         }
 
         to{
-            right: 100%;
+            left: 0;
+        }
+    }
+
+    @keyframes menumobile{
+        from{
+            left: 300%;
+        }
+
+        to{
+            left: 100%;
         }
     }
 
@@ -133,6 +144,107 @@ header{
 
         to{
             opacity: 100%;
+        }
+    }
+}
+
+//REPONSIVE HEADER
+@media screen and (max-width: 1090px){
+    header{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3em;
+
+        .website{
+            display: none;
+        }
+
+        #menuBurger{
+            position: fixed;
+            top: 0;
+            padding: 2em 0.5em;
+            background-color: #1092C2;
+            width: 15%;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        #menuBurger:hover{
+
+            div{
+                background-color: white;
+            }
+        }
+
+        #navMenu{
+            transform: translateX(-100%);
+            left: 100%;
+            animation: menumobile 1s;
+
+            li{
+                a{
+                    margin-left: 2.5em;
+                }
+            }
+
+            .socialMedia{
+                margin-left: 2.5em;
+                gap: 3em;
+
+                img{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+
+        #close{
+            left: 70%;
+        }
+    }   
+}
+
+@media screen and (max-width: 816px){
+    header{
+        #navMenu{
+            li{
+                a{
+                    padding-right: 3em;
+                }
+            }
+
+            .socialMedia{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px){
+    header{
+        #navMenu{
+            li{
+                a{
+                    padding-right: 1em;
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px){
+    header{
+        #menuBurger{
+            padding: 2em 1em;
+        }
+
+        #navMenu{
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
         }
     }
 }

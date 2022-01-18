@@ -87,3 +87,10 @@ body{
         padding-top: 3em;
     }
 }
+
+//RESPONSIVE GENERAL
+@media screen and (max-width: 1090px){
+    #leftFixedBar{
+        display: none;
+    }
+}

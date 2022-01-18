@@ -32,3 +32,71 @@
         }
     }
 }
+
+//RESPONSIVE INDEX.HTML
+@media screen and (max-width: 1090px){
+    #acceuilMain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #laptop{
+            position: initial;
+            width: 80%;
+        }
+
+        #title{
+            padding: 0;
+            width: 80%;
+        }
+
+        .socialMedia{
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 570px){
+    #acceuilMain{
+
+        #title{
+            p{
+                font-size: 24px;
+            }
+
+             h1{
+                 font-size: 50px;
+             }
+        }
+    }
+}
+
+@media screen and (max-width: 470px){
+    #acceuilMain{
+
+        #title{
+            p{
+                font-size: 22px;
+            }
+
+             h1{
+                 font-size: 40px;
+             }
+        }
+
+        .socialMedia{
+            gap: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    #acceuilMain{
+
+        #title{
+             h1{
+                 font-size: 35px;
+             }
+        }
+    }
+}

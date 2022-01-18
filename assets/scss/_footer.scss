@@ -5,4 +5,11 @@ footer{
     padding: 1em 0;
     background-color: #E7F0F5;
     margin-top: 5em;
+    text-align: center;
+}
+
+@media screen and (max-width: 450px){
+    footer{
+        font-size: 12px;
+    }
 }

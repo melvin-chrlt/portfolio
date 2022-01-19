@@ -67,7 +67,7 @@
 
                 .date{
                     position: absolute;
-                    transform: translateX(-0.7%);
+                    transform: translateX(-0.8%);
                     left: 0;
                     display: flex;
                     align-items: flex-start;
@@ -106,17 +106,17 @@
         
                         h4{
                             color: #1092C2;
-                            font-size: 22px;
+                            font-size: 26px;
                             font-weight: bold;
                         }
         
                         h5{
                             font-weight: 700;
-                            font-size: 21px;
+                            font-size: 24px;
                         }
         
                         p{
-                            font-size: 18px;
+                            font-size: 21px;
                         }
                     }
 
@@ -192,6 +192,7 @@
 
             p{
                 text-align: start;
+                font-size: 21px;
             }
         }
 
@@ -212,7 +213,7 @@
 
                 #timelineBar{
                     background-color: rgba(#1092C2, 0.2);
-                    height: 120vh;
+                    height: 130vh;
 
                     .date{
                         flex-direction: column;
@@ -265,6 +266,7 @@
         #parcours{
             #timeline{
                 #timelineBar{
+                    height: 140vh;
                     .date{
                         .timelineText{
                             width: 26em;
@@ -282,6 +284,7 @@
             padding-bottom: 5em;
             #timeline{
                 #timelineBar{
+                    height: 160vh;
                     .date{
                         .timelineText{
                             width: 20em;

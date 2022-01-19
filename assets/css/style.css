@@ -19,12 +19,10 @@
 }
 
 body {
-  background-image: url(../images/background.jpg);
-  background-size: fill;
+  background: url(../images/background.jpg) 100% 100% no-repeat;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 100%;
   min-height: 100vh;
 }
@@ -79,6 +77,17 @@ body {
   align-items: center;
   justify-content: space-around;
   padding-top: 3em;
+}
+
+.anim {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all ease-in-out 0.4s;
+}
+
+.active {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 @media screen and (max-width: 1090px) {
@@ -300,7 +309,7 @@ header #close:hover {
   display: none;
 }
 #acceuilMain #title {
-  padding: 2em 0;
+  padding-top: 10em;
   padding-left: 10em;
   display: flex;
   flex-direction: column;
@@ -335,7 +344,7 @@ header #close:hover {
     height: auto;
   }
   #acceuilMain #title {
-    padding-left: 0;
+    padding: 0;
     padding-bottom: 5em;
     width: 80%;
   }
@@ -426,7 +435,7 @@ header #close:hover {
 }
 #aproposMain #parcours #timeline #timelineBar .date {
   position: absolute;
-  transform: translateX(-0.7%);
+  transform: translateX(-0.8%);
   left: 0;
   display: flex;
   align-items: flex-start;
@@ -461,15 +470,15 @@ header #close:hover {
 }
 #aproposMain #parcours #timeline #timelineBar .date .timelineText h4 {
   color: #1092C2;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
 }
 #aproposMain #parcours #timeline #timelineBar .date .timelineText h5 {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 24px;
 }
 #aproposMain #parcours #timeline #timelineBar .date .timelineText p {
-  font-size: 18px;
+  font-size: 21px;
 }
 #aproposMain #parcours #timeline #timelineBar .today {
   top: 5%;
@@ -520,6 +529,7 @@ header #close:hover {
   }
   #aproposMain #aproposText p {
     text-align: start;
+    font-size: 21px;
   }
   #aproposMain #parcours {
     padding: 0;
@@ -537,7 +547,7 @@ header #close:hover {
   }
   #aproposMain #parcours #timeline #timelineBar {
     background-color: rgba(16, 146, 194, 0.2);
-    height: 120vh;
+    height: 130vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date {
     flex-direction: column;
@@ -571,6 +581,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 500px) {
+  #aproposMain #parcours #timeline #timelineBar {
+    height: 140vh;
+  }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 26em;
   }
@@ -578,6 +591,9 @@ header #close:hover {
 @media screen and (max-width: 410px) {
   #aproposMain #parcours {
     padding-bottom: 5em;
+  }
+  #aproposMain #parcours #timeline #timelineBar {
+    height: 160vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 20em;
@@ -733,6 +749,9 @@ header #close:hover {
   }
   #contactMain form textarea {
     padding: 1em 0;
+    padding-left: 2em;
+  }
+  #contactMain #address {
     padding-left: 2em;
   }
 }

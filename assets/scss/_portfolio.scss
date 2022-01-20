@@ -10,18 +10,97 @@
         .projet{
             width: 400px;
             height: 400px;
-            background-color: black;
             position: relative;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+            margin: 7px;
+            padding: 6px;
 
-            .title{
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .border{
+                position: absolute;
+                opacity: 0.45;
+            }
+
+            .border:before, .border:after, .border div:before, .border div:after{
                 background-color: #1092C2;
                 position: absolute;
+                content: "";
+                display: block;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .border:before, .border:after{
+                width: 0;
+                height: 2px;
+            }
+
+            .border div:before, .border div:after{
+                width: 2px;
+                height: 0;
+            }
+
+            .border.one{
+                left: 0;
+                top: 0;
+                right: 12px;
+                bottom: 12px;
+            }
+
+            .border.one:before, .border.one div:before{
+                left: 0;
+                top: 0;
+            }
+
+            .border.one:after, .border.one div:after{
+                bottom: 0;
+                right: 0;
+            }
+
+            .border.two{
+                left: 12px;
+                top: 12px;
+                right: 0;
+                bottom: 0;
+            }
+
+            .border.two:before, .border.two div:before{
+                right: 0;
+                top: 0;
+            }
+
+            .border.two:after, .border.two div:after{
+                bottom: 0;
+                left: 0;
+            }
+
+            .title{
+                background-color: white;
+                border: #1092C2 1px solid;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 height: 75px;
                 width: 65%;
                 bottom: 0;
                 transform: translateY(50%);
                 right: 10%;
+                cursor:initial;
             }
+        }
+
+        .projet:hover .border:before, .projet.hover .border:before, .projet:hover .border:after, .projet.hover .border:after{
+            width: 100%;
+        }
+
+        .projet:hover .border div:before, .projet.hover .border:before, .projet:hover .border div:after, .projet.hover .border div:after{
+            height: 100%;
         }
 
         .bot{

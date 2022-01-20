@@ -399,6 +399,7 @@ header #close:hover {
 }
 #aproposMain #aproposText p {
   text-align: center;
+  font-size: 19px;
 }
 #aproposMain #aproposText p span {
   color: #1092C2;
@@ -609,17 +610,83 @@ header #close:hover {
 #portfolioMain #projects .projet {
   width: 400px;
   height: 400px;
-  background-color: black;
   position: relative;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  margin: 7px;
+  padding: 6px;
 }
-#portfolioMain #projects .projet .title {
+#portfolioMain #projects .projet img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#portfolioMain #projects .projet .border {
+  position: absolute;
+  opacity: 0.45;
+}
+#portfolioMain #projects .projet .border:before, #portfolioMain #projects .projet .border:after, #portfolioMain #projects .projet .border div:before, #portfolioMain #projects .projet .border div:after {
   background-color: #1092C2;
   position: absolute;
+  content: "";
+  display: block;
+  transition: all 0.4s ease-in-out;
+}
+#portfolioMain #projects .projet .border:before, #portfolioMain #projects .projet .border:after {
+  width: 0;
+  height: 2px;
+}
+#portfolioMain #projects .projet .border div:before, #portfolioMain #projects .projet .border div:after {
+  width: 2px;
+  height: 0;
+}
+#portfolioMain #projects .projet .border.one {
+  left: 0;
+  top: 0;
+  right: 12px;
+  bottom: 12px;
+}
+#portfolioMain #projects .projet .border.one:before, #portfolioMain #projects .projet .border.one div:before {
+  left: 0;
+  top: 0;
+}
+#portfolioMain #projects .projet .border.one:after, #portfolioMain #projects .projet .border.one div:after {
+  bottom: 0;
+  right: 0;
+}
+#portfolioMain #projects .projet .border.two {
+  left: 12px;
+  top: 12px;
+  right: 0;
+  bottom: 0;
+}
+#portfolioMain #projects .projet .border.two:before, #portfolioMain #projects .projet .border.two div:before {
+  right: 0;
+  top: 0;
+}
+#portfolioMain #projects .projet .border.two:after, #portfolioMain #projects .projet .border.two div:after {
+  bottom: 0;
+  left: 0;
+}
+#portfolioMain #projects .projet .title {
+  background-color: white;
+  border: #1092C2 1px solid;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 75px;
   width: 65%;
   bottom: 0;
   transform: translateY(50%);
   right: 10%;
+  cursor: initial;
+}
+#portfolioMain #projects .projet:hover .border:before, #portfolioMain #projects .projet.hover .border:before, #portfolioMain #projects .projet:hover .border:after, #portfolioMain #projects .projet.hover .border:after {
+  width: 100%;
+}
+#portfolioMain #projects .projet:hover .border div:before, #portfolioMain #projects .projet.hover .border:before, #portfolioMain #projects .projet:hover .border div:after, #portfolioMain #projects .projet.hover .border div:after {
+  height: 100%;
 }
 #portfolioMain #projects .bot {
   margin-top: 5em;

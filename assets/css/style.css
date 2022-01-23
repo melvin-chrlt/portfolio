@@ -361,6 +361,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 470px) {
+  #acceuilMain #title {
+    padding-bottom: 0;
+  }
   #acceuilMain #title p {
     font-size: 22px;
   }
@@ -372,6 +375,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 380px) {
+  #acceuilMain #title {
+    gap: 5em;
+  }
   #acceuilMain #title h1 {
     font-size: 35px;
   }

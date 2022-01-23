@@ -85,6 +85,7 @@
     #acceuilMain{
 
         #title{
+            padding-bottom: 0;
             p{
                 font-size: 22px;
             }
@@ -104,6 +105,8 @@
     #acceuilMain{
 
         #title{
+            gap: 5em;
+            
              h1{
                  font-size: 35px;
              }

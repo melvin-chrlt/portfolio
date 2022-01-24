@@ -306,13 +306,13 @@ header #close:hover {
   width: 38%;
   position: absolute;
   right: 0;
-  top: 20%;
+  top: 25%;
 }
 #acceuilMain #laptop2 {
   display: none;
 }
 #acceuilMain #title {
-  padding-top: 10em;
+  padding-top: 5em;
   padding-left: 10em;
   display: flex;
   flex-direction: column;

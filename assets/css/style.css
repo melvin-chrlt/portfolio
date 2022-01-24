@@ -364,6 +364,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 470px) {
+  #acceuilMain {
+    height: 130vh;
+  }
   #acceuilMain #title {
     padding-bottom: 0;
   }

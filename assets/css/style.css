@@ -594,6 +594,9 @@ header #close:hover {
   }
 }
 @media screen and (max-width: 500px) {
+  #aproposMain #parcours #parcoursTitle {
+    padding-left: 1em;
+  }
   #aproposMain #parcours #timeline #timelineBar {
     height: 220vh;
   }

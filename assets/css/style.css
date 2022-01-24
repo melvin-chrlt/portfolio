@@ -787,7 +787,7 @@ header #close:hover {
   padding-top: 3em;
 }
 #contactMain .mainFooter #separator {
-  width: 120%;
+  width: 80%;
 }
 #contactMain .mainFooter section {
   gap: 15em;
@@ -826,6 +826,11 @@ header #close:hover {
   }
   #contactMain #address {
     padding-left: 2em;
+  }
+}
+@media screen and (max-width: 425px) {
+  #contactMain form .btn {
+    font-size: 12px;
   }
 }
 footer {

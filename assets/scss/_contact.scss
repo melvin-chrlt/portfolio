@@ -48,8 +48,6 @@
         }
     }
 
-    
-
     #address{
         display: flex;
         flex-direction: column;
@@ -88,7 +86,7 @@
         padding-top: 3em;
         
         #separator{
-            width: 120%;
+            width: 80%;
         }
 
         section{
@@ -152,6 +150,16 @@
 
         #address{
             padding-left: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    #contactMain{
+        form{
+            .btn{
+                font-size: 12px;
+            }
         }
     }
 }

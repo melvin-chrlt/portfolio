@@ -298,6 +298,9 @@ header #close:hover {
     font-size: 16px;
   }
 }
+#acceuilMain {
+  height: 120vh;
+}
 #acceuilMain #laptop {
   height: auto;
   width: 38%;
@@ -554,7 +557,7 @@ header #close:hover {
   }
   #aproposMain #parcours #timeline #timelineBar {
     background-color: rgba(16, 146, 194, 0.2);
-    height: 130vh;
+    height: 180vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date {
     flex-direction: column;
@@ -589,7 +592,7 @@ header #close:hover {
 }
 @media screen and (max-width: 500px) {
   #aproposMain #parcours #timeline #timelineBar {
-    height: 140vh;
+    height: 220vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 26em;
@@ -600,7 +603,7 @@ header #close:hover {
     padding-bottom: 5em;
   }
   #aproposMain #parcours #timeline #timelineBar {
-    height: 160vh;
+    height: 245vh;
   }
   #aproposMain #parcours #timeline #timelineBar .date .timelineText {
     width: 20em;
